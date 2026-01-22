@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria - Country Profile</title>
+    <meta name="description" content="WDD 131 - Country Profile: Nigeria. Area, population, and weather data.">
+    <meta name="author" content="Eric Evijay Ohiani">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/place.css">
+    
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/nigeria-large.webp">
+                <img src="images/nigeria-small.webp" alt="Landscape of Abuja, Nigeria" width="500" height="250">
+            </picture>
+        </div>
+
+        <div class="data-section">
+            <h2>Data</h2>
+            <ul class="data-list">
+                <li><span class="label">Area:</span> 923,768 sq km</li>
+                <li><span class="label">Population:</span> ~218 Million</li>
+                <li><span class="label">Capital:</span> Abuja</li>
+                <li><span class="label">Languages:</span> English (Official)</li>
+                <li><span class="label">Currency:</span> Naira (₦)</li>
+                <li><span class="label">Time Zone:</span> UTC+1 (WAT)</li>
+                <li><span class="label">Calling Code:</span> +234</li>
+                <li><span class="label">Internet TLD:</span> .ng</li>
+            </ul>
+        </div>
+
+        <div class="weather-section">
+            <h2 class="weather-title">Weather</h2>
+            
+            <div class="weather-icon">
+                <img src="images/weather.svg" alt="Weather Icon">
+            </div>
+
+            <ul class="weather-data">
+                <li><span class="label">Temperature:</span> <span id="temp"></span>°C</li>
+                <li><span class="label">Conditions:</span> Sunny</li>
+                <li><span class="label">Wind:</span> <span id="wind"></span> km/h</li>
+                <li><span class="label">Wind Chill:</span> <span id="chill"></span></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Eric Evijay Ohiani | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
