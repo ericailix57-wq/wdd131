@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #008751; /* Nigeria Green */
+    --secondary-color: #ffffff;
+    --accent-color: #333333;
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Hero Image */
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+/* Data & Weather Cards */
+.data-section, .weather-section {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Weather Icon Styling */
+.weather-icon img {
+    width: 60px;
+    height: auto;
+}
+
+/* Pseudo-element for wider view (Assignment Requirement) */
+/* Initially hidden on mobile, shown on desktop via media query logic if needed, 
+   but assignment asks for it specifically in the 'wider view' */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#lastModified {
+    color: yellow;
+    font-size: 0.9em;
+}
+
+/* --- Media Query for Desktop (Wider View) --- */
+@media screen and (min-width: 700px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two Columns */
+        gap: 20px;
+        grid-template-areas: 
+            "hero hero"
+            "data weather";
+    }
+
+    .hero {
+        grid-area: hero;
+    }
+    
+    .data-section {
+        grid-area: data;
+    }
+    
+    .weather-section {
+        grid-area: weather;
+    }
+
+    /* CSS Pseudo-element: Add weather emoji after the heading on desktop */
+    .weather-title::after {
+        content: " ⛅"; /* Sun behind cloud emoji */
+        font-size: 1.5rem;
+    }
+    
+    /* Hide the SVG icon on desktop since we use the emoji above */
+    .weather-icon {
+        display: none;
+    }
+}
