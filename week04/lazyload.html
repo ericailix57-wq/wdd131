@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load Activity</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; }
+        img { display: block; margin: 20px auto; width: 400px; height: 600px; background: #eee; border: 1px solid #333; }
+        /* Animation */
+        @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+        img[loading="lazy"] { animation: fade 2s; }
+    </style>
+</head>
+<body>
+    <h1>Lazy Loading Example</h1>
+    <img src="https://placehold.co/400x600?text=Image+1" loading="lazy" alt="Img 1" width="400" height="600">
+    <img src="https://placehold.co/400x600?text=Image+2" loading="lazy" alt="Img 2" width="400" height="600">
+    <img src="https://placehold.co/400x600?text=Image+3" loading="lazy" alt="Img 3" width="400" height="600">
+    <img src="https://placehold.co/400x600?text=Image+4" loading="lazy" alt="Img 4" width="400" height="600">
+    <img src="https://placehold.co/400x600?text=Image+5" loading="lazy" alt="Img 5" width="400" height="600">
+    <img src="https://placehold.co/400x600?text=Image+6" loading="lazy" alt="Img 6" width="400" height="600">
+</body>
+</html>
