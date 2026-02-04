@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Confirmation</title>
     <link rel="stylesheet" href="styles/form.css">
-    <script src="scripts/review.js" defer></script>
-</head>
+    </head>
 <body>
     <header>
         <h1>Thank You!</h1>
@@ -17,7 +16,7 @@
         <p>We appreciate your feedback.</p>
         
         <div class="counter-box">
-            <p>You have submitted <span id="reviewCount">0</span> reviews.</p>
+            <p>You have submitted <span id="reviewCount">...</span> reviews.</p>
         </div>
 
         <a href="form.html" class="back-btn">Submit Another Review</a>
@@ -27,6 +26,25 @@
         <p>&copy; <span id="currentyear"></span> | Eric Evijay Ohiani | Nigeria</p>
         <p id="lastModified"></p>
     </footer>
+
+    <script>
+        // 1. LocalStorage Counter Logic
+        // Get the current count, convert to number. If it doesn't exist, start at 0.
+        let reviewCount = Number(window.localStorage.getItem("reviewCount-ls")) || 0;
+
+        // Increment the count (add 1 for the current submission)
+        reviewCount++;
+
+        // Save the new count back to storage
+        window.localStorage.setItem("reviewCount-ls", reviewCount);
+
+        // Display the count on the page
+        document.getElementById("reviewCount").textContent = reviewCount;
+
+        // 2. Footer Date Logic
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentyear").textContent = currentYear;
+        document.getElementById("lastModified").textContent = "Last Modification: " + document.lastModified;
+    </script>
 </body>
 </html>
-
