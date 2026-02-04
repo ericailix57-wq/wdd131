@@ -1,0 +1,68 @@
+:root {
+    --primary: #000000;
+    --accent: #D4AF37; /* Gold */
+    --text: #333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .font-heading {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+}
+
+h2 {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* Color Palette Styles */
+.colors {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.color-box {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Wireframe Styles */
+.wireframe {
+    border: 2px solid #333;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.mobile {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.desktop {
+    width: 100%;
+}
+
+.wf-nav { background: #333; color: white; padding: 10px; text-align: center; }
+.wf-hero { background: #999; height: 150px; margin: 10px 0; display: flex; align-items: center; justify-content: center; }
+.wf-content, .wf-box { background: #ddd; padding: 20px; margin: 5px 0; text-align: center; }
+.wf-footer { background: #000; color: white; padding: 10px; text-align: center; }
+
+.wf-row { display: flex; gap: 10px; }
+.wf-box { flex: 1; }
