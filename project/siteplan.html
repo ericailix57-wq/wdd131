@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosera Automobile Site Plan</title>
+    <meta name="description" content="Site Plan for Mosera Automobile Project">
+    <meta name="author" content="Eric Evijay Ohiani">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Mosera Automobile Site Plan</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Mosera Automobile</strong></p>
+            <p>I chose this name because it is the registered brand name for my luxury hypercar business. It represents power, elegance, and African innovation.</p>
+            <p><em>Domain Idea:</em> mosera-auto.com</p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The website will serve as a digital showroom for Mosera Automobile. Its primary purpose is to showcase the exclusive design and technical specifications of our new hypercar model. It will also provide a reservation system for interested clients to join the waitlist.</p>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>"I am a car enthusiast; what are the horsepower and speed specifications of the Mosera model?"</li>
+                <li>"I am interested in buying this car; how do I contact the sales team or make a reservation?"</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Schema</h2>
+            <div class="colors">
+                <div class="color-box" style="background-color: #000000; color: white;">
+                    #000000<br>Primary Background
+                </div>
+                <div class="color-box" style="background-color: #D4AF37; color: black;">
+                    #D4AF37<br>Gold Accent
+                </div>
+                <div class="color-box" style="background-color: #FFFFFF; color: black; border: 1px solid #ccc;">
+                    #FFFFFF<br>Text / Secondary
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p class="font-heading">Heading Font: Playfair Display</p>
+            <p class="font-body">Body Font: Roboto</p>
+            <p>I chose <strong>Playfair Display</strong> for headings because it is a serif font that feels expensive and luxurious. <strong>Roboto</strong> is used for body text because it is clean and easy to read on mobile devices.</p>
+        </section>
+
+        <section>
+            <h2>Wireframes</h2>
+            
+            <h3>Mobile View</h3>
+            <div class="wireframe mobile">
+                <div class="wf-nav">Logo | ☰</div>
+                <div class="wf-hero">Hero Image (Car)</div>
+                <div class="wf-content">Specs</div>
+                <div class="wf-content">Gallery</div>
+                <div class="wf-footer">Footer</div>
+            </div>
+
+            <h3>Desktop View</h3>
+            <div class="wireframe desktop">
+                <div class="wf-nav">Logo | Home | Models | Reserve</div>
+                <div class="wf-hero">Hero Image (Car Wide Shot)</div>
+                <div class="wf-row">
+                    <div class="wf-box">Feature 1</div>
+                    <div class="wf-box">Feature 2</div>
+                    <div class="wf-box">Feature 3</div>
+                </div>
+                <div class="wf-footer">Footer</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Eric Evijay Ohiani | Nigeria</p>
+    </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
