@@ -1,0 +1,189 @@
+:root {
+    --primary: #000000;
+    --secondary: #D4AF37; /* Gold */
+    --text: #333;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+#menu {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    z-index: 10;
+}
+
+nav.show {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+nav a.active {
+    color: var(--secondary);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+}
+
+.cta-button {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Models Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.car-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-details {
+    padding: 15px;
+}
+
+.car-details h3 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--secondary);
+    display: inline-block;
+}
+
+/* Form */
+.reservation-form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Desktop */
+@media screen and (min-width: 768px) {
+    #menu { display: none; }
+    nav { display: block; position: static; background: none; }
+    nav ul { display: flex; justify-content: flex-end; gap: 20px; }
+    nav a { border: none; }
+}
