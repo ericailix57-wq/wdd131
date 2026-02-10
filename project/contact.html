@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosera Automobile | Reserve</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/mosera.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Mosera Auto</div>
+        <a id="menu" href="#"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="models.html">Models</a></li>
+                <li><a href="contact.html" class="active">Reserve</a></li>
+                <li><a href="siteplan.html">Site Plan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Reserve Your Mosera</h2>
+        <p>Join the waitlist. You have visited this page <span id="visitCount">0</span> times.</p>
+
+        <form method="get" action="index.html" class="reservation-form">
+            <label for="fname">First Name*</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="model">Interested Model*</label>
+            <select id="model" name="model" required>
+                <option value="" disabled selected>Select a Model...</option>
+                <option value="Mosera GT">Mosera GT</option>
+                <option value="Mosera X">Mosera X (SUV)</option>
+                <option value="Mosera E">Mosera E (Electric)</option>
+            </select>
+
+            <label for="features">Desired Features</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="feature" value="carbon"> Carbon Fiber Package</label>
+                <label><input type="checkbox" name="feature" value="autopilot"> AI Autopilot</label>
+            </div>
+
+            <label for="comments">Additional Requests</label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <input type="submit" value="Join Waitlist" class="submit-btn">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Mosera Automobile</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
